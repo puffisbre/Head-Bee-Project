@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 // PlayerScript requires the GameObject to have a Rigidbody2D component
 
@@ -12,12 +13,18 @@ public class TopDownMove : MonoBehaviour {
     public float jumpSpeed = 5f;
     public float playerSpeed = 2f;
     public bool onGround;
-    public float jumpTimer  = 0.0f;
-     public float jumpTime = 2.0f;
-     public bool isJumping = false;
+   // public float jumpTimer  = 0.0f;
+     //public float jumpTime = 2.0f;
+     //public bool isJumping = false;
+    public int MaxHealth = 100;
+    public GameObject OuchEffect;
+    int damage = 25;
+
+    public int Health { get; private set; }
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        Health = MaxHealth;
 
     }
 
@@ -32,16 +39,12 @@ public class TopDownMove : MonoBehaviour {
     }
 
      void Update() {
-        if (isJumping) {
-            jumpTimer += Time.deltaTime;
-
-            if (jumpTimer >= jumpTime) {
-                jumpTimer = 0.0f;
-                isJumping = false;
-            
-            }
-        }
+       
     }
+
+    
+
+    
 
 
 
@@ -56,4 +59,17 @@ public class TopDownMove : MonoBehaviour {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
     }
+
+
+    void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.tag == "Enemy") {
+            MaxHealth -= damage;
+        }
+
+        if (MaxHealth <= 0) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
+
 }

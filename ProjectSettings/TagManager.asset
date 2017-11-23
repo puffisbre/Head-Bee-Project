@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Platform
   - Pickup
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1623874177
+    locked: 0
+  - name: Enviroment
+    uniqueID: 3750188617
+    locked: 0
+  - name: Pickups
+    uniqueID: 1139116745
+    locked: 0
+  - name: Hero
+    uniqueID: 2837961565
     locked: 0

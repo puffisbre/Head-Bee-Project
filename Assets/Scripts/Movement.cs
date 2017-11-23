@@ -9,6 +9,10 @@ public class Movement : MonoBehaviour {
     Rigidbody2D rb;
     SpriteRenderer sprite;
     public bool onGround;
+    public float MaxHealth = 100;
+
+    public float Health { get; private set; }
+    
     //public bool isDead = false;
 
 
@@ -16,6 +20,7 @@ public class Movement : MonoBehaviour {
     // Use this for initialization
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        Health = MaxHealth;
     }
 
     // Update is called once per frame
