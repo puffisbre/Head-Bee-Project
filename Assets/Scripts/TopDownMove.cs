@@ -13,63 +13,76 @@ public class TopDownMove : MonoBehaviour {
     public float jumpSpeed = 5f;
     public float playerSpeed = 2f;
     public bool onGround;
-   // public float jumpTimer  = 0.0f;
-     //public float jumpTime = 2.0f;
-     //public bool isJumping = false;
-    public int MaxHealth = 100;
-    public GameObject OuchEffect;
-    int damage = 25;
 
-    public int Health { get; private set; }
+
+    
+
+    
+
+
+    // public float jumpTimer  = 0.0f;
+    //public float jumpTime = 2.0f;
+    //public bool isJumping = false;
+
+
+
+
+
+
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
-        Health = MaxHealth;
+       
 
     }
-
-    void DoGroundCheck() {
-        onGround = false;
-        Collider2D[] colliderList = Physics2D.OverlapBoxAll(transform.position, new Vector2(0.5f, 0.5f), 0);
-        foreach (Collider2D collider in colliderList) {
-            if (collider.tag == "Platform" && rb.velocity.y == 0) {
-                onGround = true;
-            }
-        }
-    }
+    //random shit jag ska titta på sen
+   
 
      void Update() {
-       
-    }
 
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+        //transform.Translate(horizontal * playerSpeed * Time.deltaTime, vertical * playerSpeed * Time.deltaTime, 0f, Space.World);
+
+        //Melee Attack
+
+      // if (Input.GetButtonDown("Fire1")) {
+           // GameObject[] hitObjects = Physics2D.OverlapCircleAll (transform.position, 1.0);
+        }
+
+        
     
-
-    
-
-
-
     void FixedUpdate() {
+
+        //Movement
+
         DoInput();
         Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         GetComponent<Rigidbody2D>().velocity = targetVelocity * playerSpeed;
     }
 
     void DoInput() {
-        if (Input.GetButton("Jump") && onGround) {
-            rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
-        }
+
+        //if (Input.GetButtonDown("360_XButton")){
+        //Debug.Log("X Button!");
+    //}
+    }
+
+    
+
+        
     }
 
 
-    void OnTriggerEnter2D(Collider2D col) {
-        if (col.gameObject.tag == "Enemy") {
-            MaxHealth -= damage;
-        }
-
-        if (MaxHealth <= 0) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-    }
 
 
-}
+
+
+
+
+
+
+
+
+

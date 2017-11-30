@@ -93,9 +93,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\attackTrigger.cs" />
+    <Compile Include="Assets\Scripts\BeatEmUpMove.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\EnemyHealthManager.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\HurtEnemy.cs" />
+    <Compile Include="Assets\Scripts\HurtPlayer.cs" />
+    <Compile Include="Assets\Scripts\meleeTest.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
+    <Compile Include="Assets\Scripts\playerAttack.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealthManager.cs" />
+    <Compile Include="Assets\Scripts\SpawnObject.cs" />
     <Compile Include="Assets\Scripts\TopDownMove.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

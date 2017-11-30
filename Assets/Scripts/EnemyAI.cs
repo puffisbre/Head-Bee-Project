@@ -12,15 +12,18 @@ public class EnemyAI : MonoBehaviour {
     public Transform target;
     public float chaseRange;
     public TopDownMove Player;
-    public HealthBar Health;
-    int damage = -5;
+    
+    
+    
+
 
 
     // Use this for initialization
     void Start() {
-        currentPatrolIndex = 1;
+        currentPatrolIndex = 0;
         currentPatrolPoint = patrolPoints[currentPatrolIndex];
         Player = FindObjectOfType<TopDownMove>();
+        
     }
 
     // Update is called once per frame
@@ -37,6 +40,24 @@ public class EnemyAI : MonoBehaviour {
         
 
         }
+
+       
+
     }
+
+   // void OnCollisionEnter2D(Collision2D other) {
+        //if (other.gameObject.tag == "Player") {
+            //other.GetComponent<TopDownMove>().Damage(damage);
+               // MaxHealth -= damage;
+        //}
+
+
+
+    }
+
     
-}
+
+
+
+
+
