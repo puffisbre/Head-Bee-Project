@@ -14,10 +14,10 @@ public class TopDownMove : MonoBehaviour {
     public float playerSpeed = 2f;
     public bool onGround;
 
+    SpriteRenderer sprite;
 
-    
 
-    
+
 
 
     // public float jumpTimer  = 0.0f;
@@ -32,7 +32,7 @@ public class TopDownMove : MonoBehaviour {
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
-       
+        sprite = GetComponent<SpriteRenderer>();
 
     }
     //random shit jag ska titta på sen
@@ -64,15 +64,24 @@ public class TopDownMove : MonoBehaviour {
 
     void DoInput() {
 
-        //if (Input.GetButtonDown("360_XButton")){
-        //Debug.Log("X Button!");
-    //}
+        if (Input.GetAxis("Horizontal") > 0) {
+            sprite.flipX = false;
+
+        }
+        if (Input.GetAxis("Horizontal") < 0) {
+            sprite.flipX = true;
+        }
+
+        }
+
+
+    
     }
 
     
 
         
-    }
+    
 
 
 

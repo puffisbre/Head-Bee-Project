@@ -77,6 +77,9 @@ GameObject:
   - component: {fileID: 61781663348886076}
   - component: {fileID: 114222518294223206}
   - component: {fileID: 95372029654701244}
+  - component: {fileID: 61212324699423404}
+  - component: {fileID: 61664455589298912}
+  - component: {fileID: 61639459268327790}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -138,13 +141,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1639509998715700}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.012314163, w: 0.99992424}
   m_LocalPosition: {x: 2.3, y: 0.7, z: 0}
   m_LocalScale: {x: 2.0781972, y: 2.0696492, z: 1.2980424}
   m_Children: []
   m_Father: {fileID: 4286004977252024}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.411}
 --- !u!4 &4286004977252024
 Transform:
   m_ObjectHideFlags: 1
@@ -185,7 +188,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -194,6 +197,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!61 &61212324699423404
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639509998715700}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0018502846, y: 0.02901958}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6, y: 1.6}
+    newSize: {x: 1.6, y: 1.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1220621, y: 0.154856}
+  m_EdgeRadius: 0
 --- !u!61 &61400592598234206
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -219,6 +247,56 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3639698, y: 3.6685784}
   m_EdgeRadius: 0
+--- !u!61 &61639459268327790
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639509998715700}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.38221347, y: 0.40694112}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6, y: 1.6}
+    newSize: {x: 1.6, y: 1.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1646811, y: 0.11230481}
+  m_EdgeRadius: 0
+--- !u!61 &61664455589298912
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639509998715700}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.17514114, y: 0.2293175}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6, y: 1.6}
+    newSize: {x: 1.6, y: 1.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.105866164, y: 0.08206245}
+  m_EdgeRadius: 0
 --- !u!61 &61781663348886076
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -231,7 +309,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15886402, y: 0.13095853}
+  m_Offset: {x: 0.5799756, y: 0.5482987}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -242,7 +320,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2822719, y: 1.23332}
+  m_Size: {x: 0.14531851, y: 0.13478574}
   m_EdgeRadius: 0
 --- !u!95 &95372029654701244
 Animator:
@@ -253,7 +331,7 @@ Animator:
   m_GameObject: {fileID: 1639509998715700}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d1cfc7fd666c007429d1888a0f1ed355, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -273,7 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSpeed: 5
-  playerSpeed: 2
+  playerSpeed: 1
   onGround: 0
 --- !u!114 &114222518294223206
 MonoBehaviour:

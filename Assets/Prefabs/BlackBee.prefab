@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4734251233494426}
   - component: {fileID: 212715731124224574}
-  - component: {fileID: 114950232144971966}
   - component: {fileID: 61464233918790568}
   - component: {fileID: 50826535652337554}
   - component: {fileID: 114113365471224456}
+  - component: {fileID: 114629119370826726}
   m_Layer: 0
   m_Name: BlackBee
   m_TagString: Enemy
@@ -39,7 +39,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4033971530841486}
-  - component: {fileID: 61336307387738038}
   - component: {fileID: 114351944549520772}
   m_Layer: 0
   m_Name: enemyDamageTest
@@ -68,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1742574747937004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.13, y: -1.42, z: 0}
+  m_LocalPosition: {x: -0.4659021, y: -1.2020028, z: 0}
   m_LocalScale: {x: 0.122126296, y: 0.122126296, z: 0.122126296}
   m_Children:
   - {fileID: 4033971530841486}
@@ -89,37 +88,12 @@ Rigidbody2D:
   m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61336307387738038
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1906665583435692}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -7.0549216, y: 1.4223723}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 11.241017, y: 8.396313}
-  m_EdgeRadius: 0
 --- !u!61 &61464233918790568
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -129,7 +103,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.22220254, y: 0.33330345}
@@ -170,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageToGive: 3
---- !u!114 &114950232144971966
+--- !u!114 &114629119370826726
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -178,14 +152,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1742574747937004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb94d70135d1f774cbfef10f88f3f0bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c41799e4f2839746bac984682c6e94f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolPoints: []
-  speed: 1
   target: {fileID: 0}
-  chaseRange: 2
-  Player: {fileID: 0}
+  speed: 1
 --- !u!212 &212715731124224574
 SpriteRenderer:
   m_ObjectHideFlags: 1
