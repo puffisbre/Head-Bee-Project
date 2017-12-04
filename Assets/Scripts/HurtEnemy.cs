@@ -10,6 +10,9 @@ public class HurtEnemy : MonoBehaviour {
 
     Collider2D swordcol;
 
+
+    
+
     Animator animator;
     bool isAttack;
 
@@ -19,14 +22,15 @@ public class HurtEnemy : MonoBehaviour {
     
     bool noAttack;
     SpriteRenderer sprite;
-
-
-
+   // bool isIdle;
+   // bool isWalking;
+   // bool Fire1;
+    
 
     // Use this for initialization
     void Start () {
 
-        swordcol = GameObject.Find("Sword").GetComponent<Collider2D>();
+        swordcol = GameObject.Find("HandMelee").GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
 
@@ -34,15 +38,21 @@ public class HurtEnemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-       
+        if (Input.GetButton("Fire1")) {
+            //Toggle the Collider on and off when pressing the space bar
+            swordcol.enabled = !swordcol.enabled;
+
+            //Output to console whether the Collider is on or not
             
+        }
+
+
 
     }
 
     void FixedUpdate() {
 
-        DoAttacking();
+      //  DoAttacking();
 
     }
 
@@ -62,34 +72,44 @@ public class HurtEnemy : MonoBehaviour {
 
         }
 
-    void DoAttacking() {
-        if (isAttack || noAttack) {
-            attackTimer += Time.fixedDeltaTime;
-            if (attackTimer >= attackTime) {
-                isAttack = false;
-                noAttack = true;
-            }
-            if (attackTimer >= attackTime + passiveTime) {
-                noAttack = false;
-            }
-        }
+  //  void DoAttacking() {
+       // if (isAttack || noAttack) {
+         //   attackTimer += Time.fixedDeltaTime;
+           // if (attackTimer >= attackTime) {
+          //      isAttack = false;
+          //      noAttack = true;
+          //  }
+        //    if (attackTimer >= attackTime + passiveTime) {
+            //    noAttack = false;
+        //    }
+      //  }
 
-        if (Input.GetButton("Fire1") && !isAttack && !noAttack) {
-            isAttack = true;
-            attackTimer = 0;
-            
-           
-            
-        }
+      //  if (Input.GetButton("Fire1") && !isAttack && !noAttack) {
+         //   isAttack = true;
+           // attackTimer = 0;
 
-        animator.SetBool("isAttack", isAttack);
-    }
+     //   }
+
+        
+    
+      //  animator.SetBool("isAttack", isAttack);
+
+        //}else if (Input.GetButton("Fire1") == false && !isAttack && !noAttack)
+
+        //animator.SetBool("isAttack", false);
+
+
+
+
+    //}
 
     void DoInput() {
 
+
+
         if (Input.GetAxis("Horizontal") > 0) {
             sprite.flipX = false;
-
+            
         }
         if (Input.GetAxis("Horizontal") < 0) {
             sprite.flipX = true;

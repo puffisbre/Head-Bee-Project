@@ -94,11 +94,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AiEnemy.cs" />
+    <Compile Include="Assets\Scripts\AttackAnimation.cs" />
     <Compile Include="Assets\Scripts\attackTrigger.cs" />
     <Compile Include="Assets\Scripts\BeatEmUpMove.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\EnemyHealthBar.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthManager.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\HurtEnemy.cs" />
