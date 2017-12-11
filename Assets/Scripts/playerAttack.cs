@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class playerAttack : MonoBehaviour {
 
-
+    public Collider2D attackTrigger;
     private bool attacking = false;
 
     private float attackTimer = 0;
     public float attackCd = 0.3f;
-
-    public Collider2D attackTrigger;
-
+    
+    
+    
 
     void Awake() {
 
@@ -37,6 +37,7 @@ public class playerAttack : MonoBehaviour {
             else {
                 attacking = false;
                 attackTrigger.enabled = false;
+                
             }
 
             }

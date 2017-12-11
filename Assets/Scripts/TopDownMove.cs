@@ -37,9 +37,9 @@ public class TopDownMove : MonoBehaviour {
         animator = GetComponent<Animator>();
     }
     //random shit jag ska titta på sen
-   
 
-     void Update() {
+
+    void Update() {
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -48,10 +48,10 @@ public class TopDownMove : MonoBehaviour {
 
         //Melee Attack that doesn't work atm
 
-      // if (Input.GetButtonDown("Fire1")) {
-           // GameObject[] hitObjects = Physics2D.OverlapCircleAll (transform.position, 1.0);
-        }
-
+       // if (Input.GetButtonDown("Fire1")) {
+        //    GameObject[] hitObjects = Physics2D.OverlapCircleAll(transform.position);
+      //  }
+    }
         
     
     void FixedUpdate() {
@@ -60,6 +60,7 @@ public class TopDownMove : MonoBehaviour {
 
         DoInput();
         Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        
         GetComponent<Rigidbody2D>().velocity = targetVelocity * playerSpeed;
         
         
@@ -68,7 +69,7 @@ public class TopDownMove : MonoBehaviour {
     //animation bools for idle and walking right now.
     void DoInput() {
 
-        if (Input.GetAxis("Horizontal")  > 0) {
+        if (Input.GetAxis("Horizontal") > 0) {
             sprite.flipX = false;
             animator.SetBool("isWalking", true);
             animator.SetBool("isIdle", false);
@@ -79,39 +80,41 @@ public class TopDownMove : MonoBehaviour {
             animator.SetBool("isWalking", true);
             animator.SetBool("isIdle", false);
         }
-        if (Input.GetAxis("Horizontal") == 0) {
-            
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isIdle", true);
+         if (Input.GetAxis("Horizontal") == 0) {
+
+          animator.SetBool("isWalking", false);
+          animator.SetBool("isIdle", true);
         }
 
-        if (Input.GetAxis("Vertical") > 0) {
+          if (Input.GetAxis("Vertical") > 0) {
             animator.SetBool("isWalking", true);
-            animator.SetBool("isIdle", false);
-        }
+           animator.SetBool("isIdle", false);
+          }
 
-        if (Input.GetAxis("Vertical") < 0) {
-            
+         if (Input.GetAxis("Vertical") < 0) {
+
             animator.SetBool("isWalking", true);
-            animator.SetBool("isIdle", false);
-        }
+             animator.SetBool("isIdle", false);
+         }
 
-        if (Input.GetAxis("Vertical") == 0) {
-            
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isIdle", true);
-        }
+        // if (Input.GetAxis("Vertical") == 0) {
+
+        //  animator.SetBool("isWalking", false);
+        //  animator.SetBool("isIdle", true);
+        //  }
+
+
 
 
 
     }
-     
 
-    
 
-    
-    
-    }
+
+
+
+
+}
 
     
 

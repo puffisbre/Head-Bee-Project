@@ -6,6 +6,7 @@ public class AiEnemy : MonoBehaviour {
 
     public Transform target;//set target from inspector instead of looking in Update
     public float speed = 3f;
+    public int giveDamage;
 
 
     void Start() {
@@ -20,10 +21,28 @@ public class AiEnemy : MonoBehaviour {
 
 
         //move towards the player
-        if (Vector3.Distance(transform.position, target.position) > 1f) {//move if distance from target is greater than 1
+        if (Vector3.Distance(transform.position, target.position) > 0.5f) {//move if distance from target is greater than 1
             transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
         }
 
     }
 
+
+    void OnTriggerEnter2D(Collider2D other) {
+
+
+
+
+        if (other.gameObject.tag == "Player") {
+
+            other.GetComponent<PlayerHealthManager>().HurtPlayer(giveDamage);
+
+
+        }
+    }
 }
+
+
+
+
+
