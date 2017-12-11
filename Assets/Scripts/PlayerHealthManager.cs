@@ -23,7 +23,10 @@ public class PlayerHealthManager : MonoBehaviour {
 
         
         if (playerCurrentHealth <= 0) {
-            gameObject.SetActive(false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+            // gameObject.SetActive(false);
+
         }
 
         

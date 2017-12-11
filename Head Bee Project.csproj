@@ -93,6 +93,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Pause.cs" />
+    <Compile Include="Assets\Restart.cs" />
     <Compile Include="Assets\RotatePlayer.cs" />
     <Compile Include="Assets\Scripts\AiEnemy.cs" />
     <Compile Include="Assets\Scripts\AttackAnimation.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="Assets\Scripts\PlayerHealthManager.cs" />
     <Compile Include="Assets\Scripts\SpawnObject.cs" />
     <Compile Include="Assets\Scripts\TopDownMove.cs" />
+    <Compile Include="Assets\StartGame.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

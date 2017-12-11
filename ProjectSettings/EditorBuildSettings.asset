@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 280fc4f17a88ee34fad1d34f2df3b601
+  - enabled: 1
     path: Assets/Scenes/Movement testlol.unity
     guid: b74d5cc00e5762d41a9510c974c36355
   - enabled: 1
